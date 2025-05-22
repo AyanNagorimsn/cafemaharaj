@@ -3,7 +3,7 @@
 }
 
 :root {
-  --primary: #e53b10;
+  --primary: #b84b30;
   --background: #f8f4e9;
 }
 
@@ -37,8 +37,8 @@ header {
   color: var(--primary);
   background: var(--background);
   border-radius: 20px 20px 0 0;
-  padding: 2rem;
-  width: 60vw;
+  padding: 2rem 3rem;
+  width: 50vw;
   margin: 0 auto;
 }
 

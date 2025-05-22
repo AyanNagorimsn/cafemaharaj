@@ -22,12 +22,12 @@
 <body>
 
 
-    <header class="flex justify-between flex-col ">
-        <nav class="px-8 z-50 w-full fixed top-0 flex pt-4 items-center justify-between container">
-            <div>
-                <h1 class="text-1xl font-bold duration-300">
+    <header class="flex relative justify-between flex-col ">
 
-                </h1>
+        <img class="absolute top-0 left-0 w-full h-full opacity-10" src="./bg.png" alt="">
+        <nav class="px-8 z-50 w-full fixed top-0 flex py-2 items-center justify-between container">
+            <div>
+                <h1 class="text-1xl font-bold duration-300"></h1>
             </div>
             <h1 class="text-3xl font-bold duration-300">CAFÉ MAHARAJ</h1>
             <div></div>
@@ -119,12 +119,16 @@
         </div>
 
         <div class="keep-scrolling relative flex items-center justify-between text-center">
-            <h1 class="font-bold">Order now</h1>
+            <h1 class="font-bold">ORDER NOW</h1>
 
+            <div class="h-full bg-[#b84b30] w-[3px] rounded-full"></div>
             <div class="flex gap-4">
-                <h1>Zomato</h1>
-                <h1>Swiggy</h1>
-                <h1>MagicPin</h1>
+                <a class="py-1 text-white font-bold px-3 bg-[#CB202D] rounded-lg"
+                    href="https://link.zomato.com/xqzv/rshare?id=100905214305633f6" target="_blank">Zomato</a>
+                <a class="py-1 text-white font-bold px-3 bg-[#FC8019] rounded-lg"
+                    href="https://www.swiggy.com/menu/1045750?source=sharing" target="_blank">Swiggy</a>
+                <a class="py-1 text-white font-bold px-3 bg-[#2e108e] rounded-lg"
+                    href="https://magicpin.in/walletRecharge?merchantId=53623371" target="_blank">MagicPin</a>
             </div>
 
 
@@ -132,8 +136,8 @@
             <span class="block size-4 absolute bottom-0 bg-[#f8f4e9]  left-0 rounded-tl-full -translate-x-full"></span>
             <span class="block size-4 absolute bottom-0 bg-[#f8f4e9]  right-0 rounded-tr-full translate-x-full"></span>
 
-            <span class="block size-4 absolute bottom-0 bg-[#e53b10]  left-0 rounded-br-full -translate-x-full"></span>
-            <span class="block size-4 absolute bottom-0 bg-[#e53b10]  right-0 rounded-bl-full translate-x-full"></span>
+            <span class="block size-4 absolute bottom-0 bg-[#b84b30]  left-0 rounded-br-full -translate-x-full"></span>
+            <span class="block size-4 absolute bottom-0 bg-[#b84b30]  right-0 rounded-bl-full translate-x-full"></span>
         </div>
     </header>
 
@@ -152,7 +156,7 @@
     </section>
 
     <section class="py-[15vh] relative">
-        <h1 class="text-[10vw] text-nowrap opacity-5 text-[#e53b10] font-bold absolute right-0 top-0">Our Menu</h1>
+        <h1 class="text-[10vw] text-nowrap opacity-5 text-[#b84b30] font-bold absolute right-0 top-0">Our Menu</h1>
         <div id="menu" class="max-w-[80vw] mx-auto mx-auto grid md:grid-cols-3 gap-8">
             <!-- Use this div down below with insertAdjacentHtml thingy while mapping over the menu object -->
         </div>
