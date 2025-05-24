@@ -7,24 +7,32 @@
     <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script>
 
 
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Framer Motion -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+
 
     <link rel="stylesheet" href="style.css">
     <title>Café Maharaj</title>
 </head>
 
 <body>
-
-
     <header class="flex relative justify-between flex-col ">
-
-        <img class="absolute top-0 left-0 w-full h-full opacity-10" src="./bg.png" alt="">
+        <img class="absolute top-0 left-0 w-full h-full opacity-5 object-cover" src="./bg.png" alt="">
         <nav class="px-8 z-50 w-full fixed top-0 flex py-2 items-center justify-between container">
             <div>
                 <h1 class="text-1xl font-bold duration-300"></h1>
@@ -35,12 +43,12 @@
 
         <div></div>
         <div class="w-[80vw] mx-auto flex justify-between container items-center">
-            <h1 class="font-semibold mr-12">
-                Open today til 1:30PM
+            <h1 class="font-semibold mr-16">
+                Opens at 9:00AM
             </h1>
 
             <div class="w-80 curvy-text-container">
-                <div class="w-[600px] h-full mt-12 text-white relative border-red-200 z-30">
+                <div class="w-[600px] h-full mt-12 text-white relative z-30">
                     <span class="sr-only">Where coffee meets the coast</span>
                     <div class="w-full h-full overflow-hidden relative">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1043.39 150"
@@ -113,13 +121,13 @@
                 </svg>
             </div>
 
-            <div class="font-semibold ml-12">
+            <div class="font-semibold ml-16">
                 Byculla, Mumbai
             </div>
         </div>
 
         <div class="keep-scrolling relative flex items-center justify-between text-center">
-            <h1 class="font-bold">ORDER NOW</h1>
+            <h1 class="font-bold">DINING & ORDER NOW</h1>
 
             <div class="h-full bg-[#b84b30] w-[3px] rounded-full"></div>
             <div class="flex gap-4">
@@ -142,9 +150,8 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="text-center h-[80vh] flex justify-center items-center">
+    <section id="about" class="text-center h-[40vh] flex justify-center items-center">
         <div>
-            <h1 class="font-semibold text-2xl mb-12">Hello & Good morning</h1>
             <p class="text-center w-[70vw] tracking-tight mx-auto font-bold text-3xl">Café Maharaj is for laidback
                 brekkies, catch-ups
                 with
@@ -155,42 +162,121 @@
         </div>
     </section>
 
-    <section class="py-[15vh] relative">
-        <h1 class="text-[10vw] text-nowrap opacity-5 text-[#b84b30] font-bold absolute right-0 top-0">Our Menu</h1>
-        <div id="menu" class="max-w-[80vw] mx-auto mx-auto grid md:grid-cols-3 gap-8">
-            <!-- Use this div down below with insertAdjacentHtml thingy while mapping over the menu object -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="pb-16">
+        <div class="flex gap-14 max-w-[80vw] justify-center mx-auto">
+            <article class="flex flex-col gap-16">
+                <div class="gallery-card ">
+                    <img src="./pizza.JPG" alt="Chicken Tikka Burger" class="h-80 w-92 rounded-3xl object-cover">
+                    <h1 class="text-lg mt-4 font-bold leading-snug">Pizza</h1>
+                    <p class="text-sm font-medium text-gray-600 mt-1">Cheesy, baked, and loaded with toppings.</p>
+                </div>
+
+                <div class="gallery-card ">
+                    <img src="./sandwhich.JPG" alt="Chicken Tikka Roll" class="h-80 w-92 rounded-3xl object-cover">
+                    <h1 class="text-lg mt-4 font-bold leading-snug">Sandwich</h1>
+                    <p class="text-sm text-gray-600 mt-1">Toasted, layered, and packed with fresh fillings.</p>
+                </div>
+
+                <div class="gallery-card ">
+                    <img src="./pav.JPG" alt="Chicken Tikka Roll" class="h-80 w-92 rounded-3xl object-cover">
+                    <h1 class="text-lg mt-4 font-bold leading-snug">Pav Bhaji</h1>
+                    <p class="text-sm font-medium text-gray-600 mt-1">Spicy veggie mash served with buttered buns.</p>
+                </div>
+
+                <div class="gallery-card ">
+                    <img src="./burger.JPG" class="h-80 w-92 rounded-3xl object-cover">
+                    <h1 class="text-lg mt-4 font-bold leading-snug">Burger</h1>
+                    <p class="text-sm font-medium text-gray-600 mt-1">Juicy patty packed between soft buns.</p>
+                </div>
+
+            </article>
+
+            <article class="mt-48 flex flex-col gap-16">
+                <div class="gallery-card ">
+                    <img src="./pasta.JPG" alt="Chicken Cheese Sandwich" class="h-80 w-92 rounded-3xl object-cover">
+                    <h1 class="text-lg mt-4 font-bold leading-snug">Pasta</h1>
+                    <p class="text-sm font-medium text-gray-600 mt-1">Tossed in rich sauces, served hot and fresh.</p>
+                </div>
+
+                <div class="gallery-card ">
+                    <img src="./roll.JPG" alt="Chicken Cheese Pizza" class="h-80 w-92 rounded-3xl object-cover">
+                    <h1 class="text-lg mt-4 font-bold leading-snug">Roll</h1>
+                    <p class="text-sm font-medium text-gray-600 mt-1">Stuffed and spiced for a quick bite.</p>
+                </div>
+
+                <div class="gallery-card ">
+                    <img src="./fries.jpg" alt="Chicken Cheese Pizza" class="h-80 w-92 rounded-3xl object-cover">
+                    <h1 class="text-lg mt-4 font-bold leading-snug">Fries</h1>
+                    <p class="text-sm font-medium text-gray-600 mt-1">Crispy golden fries, salted to perfection.</p>
+                </div>
+
+                <div class="gallery-card ">
+                    <img src="./shake.png" class="h-80 w-92 rounded-3xl object-cover">
+                    <h1 class="text-lg mt-4 font-bold leading-snug">Milk Shakes</h1>
+                    <p class="text-sm font-medium text-gray-600 mt-1">Thick, creamy, and irresistibly sweet.</p>
+                </div>
+            </article>
         </div>
+
     </section>
 
+
+    <!-- Menu Section -->
+    <!-- <section class="py-[15vh] relative">
+        <h1 class="text-[10vw] text-nowrap opacity-5 text-[#b84b30] font-bold absolute right-0 top-0">Our Menu</h1>
+        <div id="menu" class="max-w-[80vw] mx-auto mx-auto grid md:grid-cols-3 gap-8">
+        </div>
+    </section> -->
+
     <!-- Contact Section -->
-    <footer class="font-bold py-20">
+    <footer class="font-bold py-20 relative">
+        <img class="absolute top-0 left-0 w-full h-full opacity-5 object-cover" src="./bg.png" alt="">
+
         <main class="flex w-[80vw] flex-wrap text-center justify-between mx-auto">
-            <div>
+            <div class="flex flex-col items-center">
                 <h2 class="text-3xl mb-12">Contact</h2>
-                <p>7021896836</p>
-                <p>cafemaharaj99@gmail.com</p>
+
+                <div class="flex gap-2 items-center">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="lowercase">cafemaharaj99@gmail.com</p>
+                </div>
+
+                <div class="flex gap-2 items-center">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:7021896836" class="text-inherit hover:underline">
+                        7021896836
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4 mt-2 justify-center">
+                    <i class="fa-brands text-2xl fa-instagram"></i>
+                    <i class="fa-brands text-2xl fa-facebook-f"></i>
+                </div>
             </div>
 
             <div>
                 <h2 class="text-3xl mb-12">Opening Hours</h2>
-                <p>Weekdays</p>
-                <p>6:30AM til 1:30PM</p>
-                <p class="mt-4">Weekends</p>
-                <p>7:00AM til 2:00PM</p>
+                <p>9:00AM to 7:00PM</p>
+                <p class="mt-4">Wednesday</p>
+                <p>Closed</p>
             </div>
 
             <div>
                 <h2 class="text-3xl mb-12">Find Us</h2>
-                <p>78, DR B.A. ROAD, OPP. RANI BAUG</p>
-                <p>Byculla, Mumbai - 400027</p>
-                <p class="mt-4">
+                <p>
                     <a target="_blank"
-                        href="https://www.google.com/maps/place/Cafe+Maharaj+Milk+Center/@18.9789354,72.8311395,17z/data=!4m15!1m8!3m7!1s0x3be7ce5ca017028f:0x3ab8f3c3d3953b73!2sCafe+Maharaj+Milk+Center!8m2!3d18.9789354!4d72.8337144!10e1!16s%2Fg%2F1ptvsn0rt!3m5!1s0x3be7ce5ca017028f:0x3ab8f3c3d3953b73!8m2!3d18.9789354!4d72.8337144!16s%2Fg%2F1ptvsn0rt?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D">I
-                        need a real map →</a>
+                        href="https://www.google.com/maps/place/Cafe+Maharaj+Milk+Center/@18.9789354,72.8311395,17z/data=!4m15!1m8!3m7!1s0x3be7ce5ca017028f:0x3ab8f3c3d3953b73!2sCafe+Maharaj+Milk+Center!8m2!3d18.9789354!4d72.8337144!10e1!16s%2Fg%2F1ptvsn0rt!3m5!1s0x3be7ce5ca017028f:0x3ab8f3c3d3953b73!8m2!3d18.9789354!4d72.8337144!16s%2Fg%2F1ptvsn0rt?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D"><i
+                            class="fa-solid text-2xl fa-location-dot"></i></a>
                 </p>
+                <p class="mt-2">78, DR B.A. ROAD, OPP. RANI BAUG</p>
+                <p>Byculla, Mumbai - 400027</p>
             </div>
         </main>
     </footer>
+
+
 
     <script>
         const lenis = new Lenis({

@@ -38,13 +38,14 @@ header {
   background: var(--background);
   border-radius: 20px 20px 0 0;
   padding: 2rem 3rem;
-  width: 50vw;
+  width: 60vw;
   margin: 0 auto;
 }
-
-#about {
+/* 
+#about,
+#gallery {
   border-bottom: 1px solid var(--primary);
-}
+} */
 
 footer {
   background: var(--primary);
