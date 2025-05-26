@@ -31,29 +31,12 @@ header {
   max-width: 80vw;
 }
 
-.keep-scrolling {
-  text-transform: none;
-
-  color: var(--primary);
-  background: var(--background);
-  border-radius: 20px 20px 0 0;
-  padding: 2rem 3rem;
-  width: 60vw;
-  margin: 0 auto;
-}
-
 img {
   pointer-events: none;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   user-select: none; /* Standard */
 }
-
-/* 
-#about,
-#gallery {
-  border-bottom: 1px solid var(--primary);
-} */
 
 footer {
   background: var(--primary);

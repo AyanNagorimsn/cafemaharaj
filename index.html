@@ -126,11 +126,12 @@
             </div>
         </div>
 
-        <div class="keep-scrolling relative flex items-center justify-between text-center">
+        <div
+            class="translate-y-2 flex-col md:flex-row w-full md:w-[60vw] normal-case text-[#b84b30] bg-[#f8f4e9] rounded-t-[20px] px-4 md:px-12 py-4 md:py-8 mx-auto relative flex items-center justify-between text-center">
             <h1 class="font-bold">DINING & ORDER NOW</h1>
 
-            <div class="h-full bg-[#b84b30] w-[3px] rounded-full"></div>
-            <div class="flex gap-4">
+            <div class="h-full bg-[#b84b30] md:block hidden w-[3px] rounded-full"></div>
+            <div class="flex gap-4 py-4 md:py-0">
                 <a class="py-1 text-white font-bold px-3 bg-[#CB202D] rounded-lg"
                     href="https://link.zomato.com/xqzv/rshare?id=100905214305633f6" target="_blank">Zomato</a>
                 <a class="py-1 text-white font-bold px-3 bg-[#FC8019] rounded-lg"
@@ -141,18 +142,24 @@
 
 
             <!-- Custom Border Radius -->
-            <span class="block size-4 absolute bottom-0 bg-[#f8f4e9]  left-0 rounded-tl-full -translate-x-full"></span>
-            <span class="block size-4 absolute bottom-0 bg-[#f8f4e9]  right-0 rounded-tr-full translate-x-full"></span>
+            <span
+                class="hidden md:block size-4 absolute bottom-0 bg-[#f8f4e9]  left-0 rounded-tl-full -translate-x-full"></span>
+            <span
+                class="hidden md:block size-4 absolute bottom-0 bg-[#f8f4e9]  right-0 rounded-tr-full translate-x-full"></span>
 
-            <span class="block size-4 absolute bottom-0 bg-[#b84b30]  left-0 rounded-br-full -translate-x-full"></span>
-            <span class="block size-4 absolute bottom-0 bg-[#b84b30]  right-0 rounded-bl-full translate-x-full"></span>
+            <span
+                class="hidden md:block size-4 absolute bottom-0 bg-[#b84b30]  left-0 rounded-br-full -translate-x-full"></span>
+            <span
+                class="hidden md:block size-4 absolute bottom-0 bg-[#b84b30]  right-0 rounded-bl-full translate-x-full"></span>
         </div>
     </header>
 
     <!-- About Section -->
     <section id="about" class="text-center h-[40vh] flex justify-center items-center">
         <div>
-            <p class="text-center w-[70vw] tracking-tight mx-auto font-bold text-3xl">Café Maharaj is for laidback
+            <p
+                class="text-left md:text-center px-4 md:px-none md:w-[70vw] tracking-tight mx-auto font-bold text-xl md:text-3xl">
+                Café Maharaj is for laidback
                 brekkies, catch-ups
                 with
                 friends,
@@ -164,8 +171,8 @@
 
 
     <!-- Gallery Section -->
-    <section id="gallery" class="pb-16">
-        <div class="flex gap-14 max-w-[80vw] justify-center mx-auto">
+    <section id="gallery" class="pb-8 md:pb-16">
+        <div class="flex md:gap-14 px-4 md:max-w-[80vw] md:flex-row flex-col justify-center mx-auto">
             <article class="flex flex-col gap-16">
                 <div class="gallery-card ">
                     <img src="./pizza.JPG" alt="Chicken Tikka Burger" class="h-80 w-92 rounded-3xl object-cover">
@@ -193,7 +200,7 @@
 
             </article>
 
-            <article class="mt-48 flex flex-col gap-16">
+            <article class="md:mt-48 mt-16 flex flex-col gap-16">
                 <div class="gallery-card ">
                     <img src="./pasta.JPG" alt="Chicken Cheese Sandwich" class="h-80 w-92 rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Pasta</h1>
@@ -234,9 +241,9 @@
     <footer class="font-bold py-20 relative">
         <img class="absolute top-0 left-0 w-full h-full opacity-5 object-cover" src="./bg.png" alt="">
 
-        <main class="flex w-[80vw] flex-wrap text-center justify-between mx-auto">
+        <main class="flex w-[80vw] md:flex-row flex-col text-center justify-between mx-auto pb-8 md:pb-0">
             <div class="flex flex-col items-center">
-                <h2 class="text-3xl mb-12">Contact</h2>
+                <h2 class="text-3xl mb-4 md:mb-12">Contact</h2>
 
                 <div class="flex gap-2 items-center">
                     <i class="fa-solid fa-envelope"></i>
@@ -251,20 +258,26 @@
                 </div>
 
                 <div class="flex items-center gap-4 mt-2 justify-center">
-                    <i class="fa-brands text-2xl fa-instagram"></i>
-                    <i class="fa-brands text-2xl fa-facebook-f"></i>
+                    <a href="https://www.instagram.com/cafemaharaj" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands text-2xl fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/share/19Uc6EMbCJ/?mibextid=wwXIfr" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands text-2xl fa-facebook-f"></i>
+                    </a>
                 </div>
             </div>
 
             <div>
-                <h2 class="text-3xl mb-12">Opening Hours</h2>
+                <h2 class="text-3xl mb-4 md:mb-12 md:mt-0 mt-14">Opening Hours</h2>
                 <p>9:00AM to 7:00PM</p>
-                <p class="mt-4">Wednesday</p>
+                <p class="md:mt-4">Wednesday</p>
                 <p>Closed</p>
             </div>
 
             <div>
-                <h2 class="text-3xl mb-12">Find Us</h2>
+                <h2 class="text-3xl mb-4 md:mb-12 md:mt-0 mt-14">Find Us</h2>
                 <p>
                     <a target="_blank"
                         href="https://www.google.com/maps/place/Cafe+Maharaj+Milk+Center/@18.9789354,72.8311395,17z/data=!4m15!1m8!3m7!1s0x3be7ce5ca017028f:0x3ab8f3c3d3953b73!2sCafe+Maharaj+Milk+Center!8m2!3d18.9789354!4d72.8337144!10e1!16s%2Fg%2F1ptvsn0rt!3m5!1s0x3be7ce5ca017028f:0x3ab8f3c3d3953b73!8m2!3d18.9789354!4d72.8337144!16s%2Fg%2F1ptvsn0rt?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D"><i
