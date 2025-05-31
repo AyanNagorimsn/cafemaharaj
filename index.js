@@ -32,7 +32,7 @@ window.addEventListener("scroll", () => {
 });
 
 let navbar = document.querySelector("nav");
-let target = document.querySelector(".keep-scrolling");
+let target = document.querySelector(".header-bottom-bar");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -51,3 +51,32 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(target);
+
+const mobileNav = document.querySelector(".mobile-nav");
+
+const scrollSentinel = document.createElement("div");
+scrollSentinel.style.position = "absolute";
+scrollSentinel.style.top = "200px";
+scrollSentinel.style.height = "1px";
+scrollSentinel.style.width = "100%";
+document.body.prepend(scrollSentinel);
+
+const scrollNavObserver = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      mobileNav.classList.remove("active");
+      console.log("not active");
+    } else {
+      mobileNav.classList.add("active");
+      console.log("active");
+      // mobileNav.classList.add("text-[#b84b30]", "bg-[#fff]");
+      // mobileNav.classList.remove("text-[#fff]");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+);
+
+scrollNavObserver.observe(scrollSentinel);

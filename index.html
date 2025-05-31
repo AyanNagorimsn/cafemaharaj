@@ -25,34 +25,38 @@
     <!-- Framer Motion -->
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
 
-
     <link rel="stylesheet" href="style.css">
+
     <title>Café Maharaj</title>
 </head>
 
 <body>
-    <header class="flex relative justify-between flex-col ">
-        <img class="absolute top-0 left-0 w-full h-full opacity-5 object-cover" src="./bg.png" alt="">
-        <nav class="px-8 z-50 w-full fixed top-0 flex py-2 items-center justify-between container">
-            <div>
-                <h1 class="text-1xl font-bold duration-300"></h1>
-            </div>
+    <header class="flex relative justify-between flex-col">
+        <img class="absolute top-0 left-0 w-full h-full opacity-[.05] object-cover" src="./bg.png"
+            alt="background pattern image">
+
+        <nav class="hidden md:flex px-8 z-50 w-full fixed top-0 py-2 items-center justify-center container">
             <h1 class="text-3xl font-bold duration-300">CAFÉ MAHARAJ</h1>
-            <div></div>
         </nav>
 
-        <div></div>
-        <div class="w-[80vw] mx-auto flex justify-between container items-center">
-            <h1 class="font-semibold mr-16">
+        <nav class="mobile-nav flex md:hidden px-8 z-50 w-full fixed top-0 py-2 items-center justify-center container">
+            <h1 class="text-2xl md:text-3xl font-bold duration-300">CAFÉ MAHARAJ</h1>
+        </nav>
+
+        <div class="md:w-[80vw] w-full h-full mx-auto flex flex-col md:flex-row justify-between container items-center">
+            <h1 class="font-semibold mt-[20vh] md:mt-0 text-center md:text-left text-xl md:text-lg md:mr-16">
                 Opens at 9:00AM
+                <span class="block md:hidden">
+                    Byculla, Mumbai
+                </span>
             </h1>
 
-            <div class="w-80 curvy-text-container">
-                <div class="w-[600px] h-full mt-12 text-white relative z-30">
+            <div class="md:w-80 w-[100vw] curvy-text-container">
+                <div class="w-full md:w-[600px] h-full mt-48 md:mt-12 text-white relative z-30">
                     <span class="sr-only">Where coffee meets the coast</span>
                     <div class="w-full h-full overflow-hidden relative">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1043.39 150"
-                            class="absolute inset-y-0 left-0 w-[1355px] h-[195px] pointer-events-none select-none">
+                            class="absolute inset-y-0 md:scale-0 left-0 w-[1355px] h-[195px] pointer-events-none select-none">
                             <path id="wavy-path" fill="none" class="cls-1"
                                 d="M21.7,94c62.5,0,62.5-38,125-38s62.5,38,125,38,62.5-38,125-38,62.5,38,125,38,62.5-38,125-38,62.5,38,125,38,62.5-38,125-38,62.5,38,125,38">
                             </path>
@@ -68,14 +72,11 @@
                 </div>
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 680"
-                    width="400" height="200" preserveAspectRatio="xMidYMid meet"
+                <svg class="scale-75 md:scale-100" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 680" width="400" height="200"
+                    preserveAspectRatio="xMidYMid meet"
                     style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
-                    <defs>
-                        <clipPath id="__lottie_element_290">
-                            <rect width="720" height="680" x="0" y="0"></rect>
-                        </clipPath>
-                    </defs>
+
                     <g clip-path="url(#__lottie_element_290)">
                         <g transform="matrix(0.999439001083374,0.033490926027297974,-0.033490926027297974,0.999439001083374,-584.965087890625,-228.98883056640625)"
                             opacity="1" style="display: block;">
@@ -121,13 +122,13 @@
                 </svg>
             </div>
 
-            <div class="font-semibold ml-16">
+            <div class="hidden md:block font-semibold ml-16">
                 Byculla, Mumbai
             </div>
         </div>
 
         <div
-            class="translate-y-2 flex-col md:flex-row w-full md:w-[60vw] normal-case text-[#b84b30] bg-[#f8f4e9] rounded-t-[20px] px-4 md:px-12 py-4 md:py-8 mx-auto relative flex items-center justify-between text-center">
+            class="header-bottom-bar translate-y-2 md:translate-y-0 flex-col md:flex-row w-full md:w-[60vw] normal-case text-[#b84b30] bg-[#f8f4e9] rounded-t-[20px] px-4 md:px-12 py-4 md:py-8 mx-auto relative flex items-center justify-between text-center">
             <h1 class="font-bold">DINING & ORDER NOW</h1>
 
             <div class="h-full bg-[#b84b30] md:block hidden w-[3px] rounded-full"></div>
@@ -143,14 +144,14 @@
 
             <!-- Custom Border Radius -->
             <span
-                class="hidden md:block size-4 absolute bottom-0 bg-[#f8f4e9]  left-0 rounded-tl-full -translate-x-full"></span>
+                class="hidden md:block size-4 absolute bottom-0 bg-[#f8f4e9] left-0 rounded-tl-full -translate-x-full"></span>
             <span
-                class="hidden md:block size-4 absolute bottom-0 bg-[#f8f4e9]  right-0 rounded-tr-full translate-x-full"></span>
+                class="hidden md:block size-4 absolute bottom-0 bg-[#f8f4e9] right-0 rounded-tr-full translate-x-full"></span>
 
             <span
-                class="hidden md:block size-4 absolute bottom-0 bg-[#b84b30]  left-0 rounded-br-full -translate-x-full"></span>
+                class="hidden md:block size-4 absolute bottom-0 bg-[#b84b30] left-0 rounded-br-full -translate-x-full"></span>
             <span
-                class="hidden md:block size-4 absolute bottom-0 bg-[#b84b30]  right-0 rounded-bl-full translate-x-full"></span>
+                class="hidden md:block size-4 absolute bottom-0 bg-[#b84b30] right-0 rounded-bl-full translate-x-full"></span>
         </div>
     </header>
 
@@ -174,26 +175,29 @@
     <section id="gallery" class="pb-8 md:pb-16">
         <div class="flex md:gap-14 px-4 md:max-w-[80vw] md:flex-row flex-col justify-center mx-auto">
             <article class="flex flex-col gap-16">
-                <div class="gallery-card ">
-                    <img src="./pizza.JPG" alt="Chicken Tikka Burger" class="h-80 w-92 rounded-3xl object-cover">
+                <div class="gallery-card">
+                    <img src="./pizza.JPG" alt="Chicken Tikka Burger"
+                        class="h-80 w-92 border-2 border-[#b84b30] rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Pizza</h1>
                     <p class="text-sm font-medium text-gray-600 mt-1">Cheesy, baked, and loaded with toppings.</p>
                 </div>
 
                 <div class="gallery-card ">
-                    <img src="./sandwhich.JPG" alt="Chicken Tikka Roll" class="h-80 w-92 rounded-3xl object-cover">
+                    <img src="./sandwhich.JPG" alt="Chicken Tikka Roll"
+                        class="h-80 w-92 border-2 border-[#b84b30] rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Sandwich</h1>
                     <p class="text-sm text-gray-600 mt-1">Toasted, layered, and packed with fresh fillings.</p>
                 </div>
 
                 <div class="gallery-card ">
-                    <img src="./pav.JPG" alt="Chicken Tikka Roll" class="h-80 w-92 rounded-3xl object-cover">
+                    <img src="./pav.JPG" alt="Chicken Tikka Roll"
+                        class="h-80 w-92 border-2 border-[#b84b30] rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Pav Bhaji</h1>
                     <p class="text-sm font-medium text-gray-600 mt-1">Spicy veggie mash served with buttered buns.</p>
                 </div>
 
                 <div class="gallery-card ">
-                    <img src="./burger.JPG" class="h-80 w-92 rounded-3xl object-cover">
+                    <img src="./burger.JPG" class="h-80 w-92 border-2 border-[#b84b30] rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Burger</h1>
                     <p class="text-sm font-medium text-gray-600 mt-1">Juicy patty packed between soft buns.</p>
                 </div>
@@ -202,25 +206,28 @@
 
             <article class="md:mt-48 mt-16 flex flex-col gap-16">
                 <div class="gallery-card ">
-                    <img src="./pasta.JPG" alt="Chicken Cheese Sandwich" class="h-80 w-92 rounded-3xl object-cover">
+                    <img src="./pasta.JPG" alt="Chicken Cheese Sandwich"
+                        class="h-80 w-92 border-2 border-[#b84b30] rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Pasta</h1>
                     <p class="text-sm font-medium text-gray-600 mt-1">Tossed in rich sauces, served hot and fresh.</p>
                 </div>
 
                 <div class="gallery-card ">
-                    <img src="./roll.JPG" alt="Chicken Cheese Pizza" class="h-80 w-92 rounded-3xl object-cover">
+                    <img src="./roll.JPG" alt="Chicken Cheese Pizza"
+                        class="h-80 w-92 border-2 border-[#b84b30] rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Roll</h1>
                     <p class="text-sm font-medium text-gray-600 mt-1">Stuffed and spiced for a quick bite.</p>
                 </div>
 
                 <div class="gallery-card ">
-                    <img src="./fries.jpg" alt="Chicken Cheese Pizza" class="h-80 w-92 rounded-3xl object-cover">
+                    <img src="./fries.jpg" alt="Chicken Cheese Pizza"
+                        class="h-80 w-92 border-2 border-[#b84b30] rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Fries</h1>
                     <p class="text-sm font-medium text-gray-600 mt-1">Crispy golden fries, salted to perfection.</p>
                 </div>
 
                 <div class="gallery-card ">
-                    <img src="./shake.png" class="h-80 w-92 rounded-3xl object-cover">
+                    <img src="./shake.png" class="h-80 w-92 border-2 border-[#b84b30] rounded-3xl object-cover">
                     <h1 class="text-lg mt-4 font-bold leading-snug">Milk Shakes</h1>
                     <p class="text-sm font-medium text-gray-600 mt-1">Thick, creamy, and irresistibly sweet.</p>
                 </div>
